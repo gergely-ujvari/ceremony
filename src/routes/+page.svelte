@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import CorpusEditor from "$lib/components/corpus/CorpusEditor.svelte";
+    const handleCorpus = (event) => {
+        console.log('event text', event.detail.text);
+    };
+</script>
+
+<main>
+    <h1>Welcome to Ceremony</h1>
+    <p/>
+    <CorpusEditor on:corpus={handleCorpus} />
+</main>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+    main {
+        margin: 10px 15px;
+    }
+</style>
